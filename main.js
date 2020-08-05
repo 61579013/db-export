@@ -7,6 +7,9 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    frame: false, // 边框隐藏
+    titleBarStyle: 'hidden', // 隐藏MAC标题
+    resizable: false, // 固定宽高
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
@@ -24,7 +27,7 @@ function createWindow () {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow()
-  
+
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
