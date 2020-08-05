@@ -7,6 +7,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    // transparent: true, // 窗口透明
     frame: false, // 边框隐藏
     titleBarStyle: 'hidden', // 隐藏MAC标题
     resizable: false, // 固定宽高
