@@ -8,8 +8,8 @@ function createWindow () {
     width: 800,
     height: 600,
     // transparent: true, // 窗口透明
-    frame: false, // 边框隐藏
-    titleBarStyle: 'hidden', // 隐藏MAC标题
+    // frame: false, // 边框隐藏
+    // titleBarStyle: 'hidden', // 隐藏MAC标题
     resizable: false, // 固定宽高
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
