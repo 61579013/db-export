@@ -92,41 +92,48 @@ let template = [
   {
     label: 'Window ( 窗口 )',
     role: 'window',
-    submenu: [{
-      label: 'Minimize ( 最小化 )',
-      accelerator: 'CmdOrCtrl+M',
-      role: 'minimize'
-    }, {
-      label: 'Close ( 关闭 )',
-      accelerator: 'CmdOrCtrl+W',
-      role: 'close'
-    }, {
-      label: '切换开发者工具',
-      accelerator: (function () {
-        if (process.platform === 'darwin') {
-          return 'Alt+Command+I'
-        } else {
-          return 'Ctrl+Shift+I'
+    submenu: [
+      {
+        label: 'Minimize ( 最小化 )',
+        accelerator: 'CmdOrCtrl+M',
+        role: 'minimize'
+      },
+      {
+        label: 'Close ( 关闭 )',
+        accelerator: 'CmdOrCtrl+W',
+        role: 'close'
+      },
+      {
+        label: '切换开发者工具',
+        accelerator: (function () {
+          if (process.platform === 'darwin') {
+            return 'Alt+Command+I'
+          } else {
+            return 'Ctrl+Shift+I'
+          }
+        })(),
+        click: function (item, focusedWindow) {
+          if (focusedWindow) {
+            focusedWindow.toggleDevTools()
+          }
         }
-      })(),
-      click: function (item, focusedWindow) {
-        if (focusedWindow) {
-          focusedWindow.toggleDevTools()
-        }
+      },
+      {
+        type: 'separator'
       }
-    },{
-      type: 'separator'
-    }]
+    ]
   },
   {
     label: 'Help ( 帮助 ) ',
     role: 'help',
-    submenu: [{
-      label: 'FeedBack ( 意见反馈 )',
-      click: function () {
-        electron.shell.openExternal('https://forum.iptchain.net')
+    submenu: [
+      {
+        label: 'FeedBack ( 意见反馈 )',
+        click: function () {
+          electron.shell.openExternal('https://forum.iptchain.net')
+        }
       }
-    }]
+    ]
   }
 ]
 
