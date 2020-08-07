@@ -38,7 +38,7 @@ function createWindow () {
 }
 
 app.on('ready', function () {
-  const menu = Menu.buildFromTemplate(template);
+  const menu = Menu.buildFromTemplate(menuTemplate);
   Menu.setApplicationMenu(menu);// 设置菜单部分
   createWindow();
 });
@@ -59,7 +59,7 @@ app.on('window-all-closed', function () {
  * 注册键盘快捷键
  * 其中：label: '切换开发者工具',这个可以在发布时注释掉
  */
-let template = [
+let menuTemplate = [
   {
     label: 'Edit ( 操作 )',
     submenu: [{
@@ -191,7 +191,7 @@ function findReopenMenuItem () {
 // 针对Mac端的一些配置
 if (process.platform === 'darwin') {
   const name = electron.app.getName()
-  template.unshift({
+  menuTemplate.unshift({
     label: name,
     submenu: [{
       label: 'Quit ( 退出 )',
@@ -203,18 +203,18 @@ if (process.platform === 'darwin') {
   })
 
   // Window menu.
-  template[3].submenu.push({
+  menuTemplate[3].submenu.push({
     type: 'separator'
   }, {
     label: 'Bring All to Front',
     role: 'front'
   })
 
-  addUpdateMenuItems(template[0].submenu, 1)
+  addUpdateMenuItems(menuTemplate[0].submenu, 1)
 }
 
 // 针对Windows端的一些配置
 if (process.platform === 'win32') {
-  const helpMenu = template[template.length - 1].submenu
+  const helpMenu = menuTemplate[menuTemplate.length - 1].submenu
   addUpdateMenuItems(helpMenu, 0)
 }
