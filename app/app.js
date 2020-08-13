@@ -24,7 +24,7 @@ app.on('ready', function() {
     height: 600,
     minWidth: 500,
     minHeight: 200,
-    // acceptFirstMouse: true,
+    acceptFirstMouse: true,
     titleBarStyle: 'hidden',
     frame: false
   });
@@ -33,7 +33,7 @@ app.on('ready', function() {
   mainWindow.loadURL('file://' + __dirname + '/list.html');
 
   // Open the DevTools.
-  //mainWindow.openDevTools();
+  mainWindow.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
