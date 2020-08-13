@@ -10,10 +10,11 @@
     <script src="js/menu.js" charset="utf-8"></script>
 
     <style>
-      .toolbar-actions a {
+      .toolbar-actions span {
         margin-left: 10px;
-        font-size: 16px;
+        font-size: 12px;
         color: #333333;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -22,7 +23,7 @@
 
       <!-- .toolbar-header sits at the top of your app -->
       <header class="toolbar toolbar-header">
-        <h1 class="title">Db Table Export</h1>
+        <h1 class="title">Db Table Export V1.0.0</h1>
       </header>
 
       <!-- Your app's content goes inside .window-content -->
@@ -33,11 +34,11 @@
 
               <span class="nav-group-item">
                 <span class="icon icon-home"></span>
-                connors
+                淘宝生产库
               </span>
               <span class="nav-group-item active">
                 <span class="icon icon-light-up"></span>
-                Photon
+                拼多多生产库
               </span>
               <span class="nav-group-item">
                 <span class="icon icon-download"></span>
@@ -84,50 +85,12 @@
                 <span class="icon icon-monitor"></span>
                 Desktop
               </span>
-              <span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Desktop
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Desktop
-              </span>
 
-              <span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Desktop
-              </span>
-
-              <span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Desktop
-              </span>
               <span class="nav-group-item">
                 <span class="icon icon-drive"></span>
                 Desktop
               </span>
-              <span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Desktop
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Desktop
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                222Desktop
-              </span>
-              <span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Desktop
-              </span><span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Desktop
-              </span><span class="nav-group-item">
-                <span class="icon icon-monitor"></span>
-                Desktop
-              </span>
+
             </nav>
           </div>
 
@@ -136,14 +99,16 @@
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Kind</th>
+                  <th>Comment</th>
                   <th>Date Modified</th>
                   <th>Author</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="file_arq">
-                  <td>bars.scss</td>
+                  <td>
+                    capital_shengyin_repay
+                  </td>
                   <td>Document</td>
                   <td>Oct 13, 2015</td>
                   <td>connors</td>
@@ -259,13 +224,11 @@
       <footer class="toolbar toolbar-footer">
         <div class="toolbar-actions">
 
-          <a title="添加" href="index.html">
-            <span class="icon icon-plus"></span>
-          </a>
+          <span class="icon icon-plus"> 添加</span>
 
-          <a title="修改" href="index.html">
-            <span class="icon icon-pencil"></span>
-          </a>
+          <span class="icon icon-pencil"> 修改</span>
+
+          <span class="icon icon-export" style="margin-left: 130px"> 导出</span>
 
         </div>
       </footer>
