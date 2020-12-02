@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Downloader V1.0</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/photon.css">
+
+    <!-- Javascript -->
+    <style>
+      .nav-group-item {padding: 2px 0 2px 15px}
+      .toolbar-actions span {
+        margin-left: 10px;
+        font-size: 12px;
+        color: #333333;
+        text-decoration: none;
+      }
+      section.upload {
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        /* box-sizing: border-box; */
+        max-width: 96rem;
+        margin: 0 auto;
+        padding: .1rem 0.2rem;
+      }
+      section.target {
+        position: relative;
+        z-index: 16;
+        height: 14rem;
+        margin: 1rem auto;
+        color: #40444f;
+        border: 1px solid #616778;
+        cursor: pointer;
+        -webkit-transition: color 0.2s ease-out, border-color 0.2s ease-out;
+        -moz-transition: color 0.2s ease-out, border-color 0.2s ease-out;
+        -o-transition: color 0.2s ease-out, border-color 0.2s ease-out;
+        -ms-transition: color 0.2s ease-out, border-color 0.2s ease-out;
+        transition: color 0.2s ease-out, border-color 0.2s ease-out;
+      }
+      section.target figure.icon {
+        margin: 2.4rem auto .8rem;
+        display: inline-block;
+        width: 100%;
+        height: 5.760000000000001rem;
+        background-position: -11.8rem -22.1rem;
+        background-repeat: no-repeat;
+        -webkit-background-size: 60rem;
+        -moz-background-size: 60rem;
+        background-size: 60rem;
+        background-image: url(./images/sprite.svg);
+        display: block;
+      }
+      section.target p {
+        margin: 0 .5rem .5rem;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.75rem;
+        line-height: 2rem;
+      }
+      section.target p small {
+        font-weight: normal;
+        font-size: 1.28rem;
+        opacity: .7;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+        filter: alpha(opacity=70);
+      }
+      input[type=file] {
+        position: absolute;
+        /*top: -16rem;*/
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window">
+
+      <!-- .toolbar-header sits at the top of your app -->
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Downloader V1.0</h1>
+      </header>
+
+      <!-- Your app's content goes inside .window-content -->
+      <div class="window-content">
+        <div class="pane-group">
+
+          <div class="pane">
+            <section class="upload">
+              <section class="target">
+                <figure class="icon"></figure>
+                <p>Drop your .png or .jpg files here!</p>
+                <p><small>Up to 20 images, max 5 MB each.</small></p>
+                <input type="file" multiple="multiple">
+              </section>
+            </section>
+            <table class="table-striped">
+              <thead>
+                <tr>
+                  <th>姓名</th>
+                  <th>文件名</th>
+                  <th>文件地址</th>
+                  <th>下载进度</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="file_arq">
+
+                  <td>
+                    capital_shengyin_repay
+                  </td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>base.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>button-groups.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>buttons.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>docs.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>forms.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>grid.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>icons.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>images.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>lists.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>mixins.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>navs.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>normalize.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>photon.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>tables.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>tabs.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>utilities.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>variables.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>variables.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>variables.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+                <tr class="file_arq">
+
+                  <td>variables.scss</td>
+                  <td>Document</td>
+                  <td>Oct 13, 2015</td>
+                  <td>connors</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <footer class="toolbar toolbar-footer">
+        <div class="toolbar-actions">
+
+          <span class="icon icon-plus"> 添加</span>
+
+          <span class="icon icon-pencil"> 修改</span>
+
+          <span class="icon icon-export" style="margin-left: 130px"> 导出</span>
+
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
