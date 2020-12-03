@@ -26,7 +26,10 @@ app.on('ready', function() {
     minHeight: 200,
     acceptFirstMouse: true,
     titleBarStyle: 'hidden',
-    frame: false
+    frame: false,
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
 
   // and load the index.html of the app.

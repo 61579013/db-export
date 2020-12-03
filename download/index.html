@@ -5,7 +5,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/photon.css">
-
+    <script src="js/download.js"></script>
     <!-- Javascript -->
     <style>
       .nav-group-item {padding: 2px 0 2px 15px}
@@ -27,7 +27,7 @@
       section.target {
         position: relative;
         z-index: 16;
-        height: 14rem;
+        /*height: 14rem;*/
         margin: 1rem auto;
         color: #40444f;
         border: 1px solid #616778;
@@ -48,7 +48,7 @@
         -webkit-background-size: 60rem;
         -moz-background-size: 60rem;
         background-size: 60rem;
-        background-image: url(./images/sprite.svg);
+        /*background-image: url(./images/sprite.svg);*/
         display: block;
       }
       section.target p {
@@ -87,11 +87,10 @@
         <div class="pane-group">
 
           <div class="pane">
-            <section class="upload">
+            <section class="upload" onclick="openUploadDialog()">
               <section class="target">
-                <figure class="icon"></figure>
-                <p>Drop your .png or .jpg files here!</p>
-                <p><small>Up to 20 images, max 5 MB each.</small></p>
+                <p>Drop your csv file here!</p>
+                <p><small>max 5 MB each.</small></p>
                 <input type="file" multiple="multiple">
               </section>
             </section>
@@ -272,5 +271,6 @@
         </div>
       </footer>
     </div>
+
   </body>
 </html>
